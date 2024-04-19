@@ -6,9 +6,9 @@ const expressApp = require('./express-app');
 const StartServer = async() => {
 
     const app = express();
-
+    
     await databaseConnection();
-
+    
     await expressApp(app);
 
     app.listen(PORT, () => {
@@ -18,6 +18,7 @@ const StartServer = async() => {
         console.log(err);
         process.exit();
     })
+
 }
 
-StartServer()
+StartServer();
